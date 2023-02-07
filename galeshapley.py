@@ -142,9 +142,6 @@ def hopital_GS(matspe,matetu,n,m,cap):
 			Tab_hop_propositions[hosp]=0
 	return Tab_hopitaux
 			
-			
-			
-			
 
 
 def paires_instables(affectation,matEtu,matSpe):
@@ -168,8 +165,6 @@ def paires_instables(affectation,matEtu,matSpe):
 
 
 	return np.asarray(paires_instables)
-
-
 
 
 def compare(i1,i2,h1,h2,matEtu,matSpe):

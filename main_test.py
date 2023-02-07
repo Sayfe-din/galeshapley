@@ -4,11 +4,23 @@ from galeshapley import *
 
 
 cap=recup_cap("PrefSpe.txt")
-matetu=matEtu("PrefEtu.txt")
-matspe=matSpe("PrefSpe.txt")
+mat_etu=matEtu("PrefEtu.txt")
+mat_spe=matSpe("PrefSpe.txt")
 
-#interne_GS(matetu,matspe,len(matetu),len(matspe),cap)
-hopi=hopital_GS(matspe,matetu,len(matetu),len(matspe),cap)
+#affectation = interne_GS(mat_etu,mat_spe,len(mat_etu),len(mat_spe),cap)
+
+"""
+k = affectation[1][0]
+z = affectation[4][0]
+m = affectation[8][1]
+
+affectation[1][0] = m
+affectation[8][1] = z
+affectation[4][0] = k
+"""
+
+hopi=hopital_GS(mat_spe,mat_etu,len(mat_etu),len(mat_spe),cap)
 print(hopi)
-#affectation = [[1,2],[3],[4],[5],[6],[7],[8],[9],[10,11]]
-#paires_instables(affectation,matetu,matspe)
+
+#print(affectation)
+#print(paires_instables(affectation,mat_etu,mat_spe))
