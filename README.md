@@ -1,2 +1,1 @@
-# galeshapley
-Implementation of the Gale-Shapley Algorithm
+# Gale-Shapley
