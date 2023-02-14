@@ -2,7 +2,7 @@ import numpy as np
 
 def prog_lin_etu(matetu,k):
     f=open("shapedlikeanL.lp",'w')
-    """
+    """c
     [
         [2,3],       x2_3
         [1,3],
