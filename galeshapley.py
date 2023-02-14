@@ -26,6 +26,7 @@ def iftaken_interne(inter,hosp,list_of_taken_hosp,matpref_hosp):
 def interne_GS(matetu,matspe,n,m,cap):
 	assert(not np.array_equal(cap,np.array([]))),"Cap est vide"				#array_equal return True if array is same shape
 
+	it=0				#compteur d'iteration
 	Tab_interne = np.zeros(n,dtype=np.int32)  						# 1 Si i-eme etudiant a ete accepte 0 sinon
 	Tab_hopitaux = np.zeros((m,cap.max()+1),dtype=np.int32)					# indice est le master concerné et la valeur est l'etudiant [len([1])=1,len([4])=1,[5],[1,8]]
 	Tab_interne_propositions=np.zeros(n,dtype=np.int32)					# indice: l'etudiant, contenu: le prochain Master a proposer. Si le dernier master a été demander et refuser contenu remis a zero
@@ -51,7 +52,8 @@ def interne_GS(matetu,matspe,n,m,cap):
 						Tab_interne_propositions[i]=0
 						cantake=True
 						freedstudent=-2
-						
+					it+=1
+				it+=1
 					Tab_interne_propositions[i]+=1
 					
 				if(not taken):

@@ -1,5 +1,4 @@
 import numpy as np
-import random
 
 #int*int->tab[int*tab[int]] avec n : nb etudiants et m: nb masters
 def gen_pref_etu(n,m):
@@ -21,11 +20,8 @@ def gen_pref_master(n,m):
     cap = np.random.randint(n/m,n/m+1,m) 
     
     while(np.sum(cap)<n): #si division avec reste rajouter les derniers place aléatoirement
-        cap[random.randint(0,m-1)] += 1
+        cap[np.random.randint(0,m-1)] += 1
     
-    mat_spe = np.zeros((m,n),dtype=np.int32) #matrice preference masters
-
-    for i in range(len(mat_spe)):
-        np.copyto(mat_spe[i],np.random.rand(n).argsort(axis=-1))
+    mat_spe = np.random.rand(m,n).argsort(axis=-1) #matrice preference masters
     
     return mat_spe,cap
